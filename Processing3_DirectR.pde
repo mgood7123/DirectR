@@ -18,7 +18,7 @@ void setup() {
   g2.beginDraw_();
   
   looping = false;
-
+  
   originallyLooping = looping;
 }
 
