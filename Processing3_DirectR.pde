@@ -17,7 +17,7 @@ void setup() {
   // create a new FBO and set up a texture
   g2.beginDraw_();
   
-  looping = true;
+  looping = false;
   
   originallyLooping = looping;
 }
@@ -39,6 +39,7 @@ void drawBox() {
   g2.background(0);
   int c = wrap(frameCount, 255);
   g2.fill(0, c, c);
+  //g2.fill(255);
   if (frameCount == 1) g2.lights();
   g2.noStroke();
   //g2.translate(width/2, height/2);
