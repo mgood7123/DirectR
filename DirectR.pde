@@ -44,6 +44,7 @@ public class DirectR extends DirectRImaging {
 
     if (currentFramebuffer != fbo) {
       if (DirectRLogging) println("currentFramebuffer != fbo");
+      // these do not seem to affect loop(); drawing, still nothing is drawn
       reflection.put_currentFramebuffer(ppg, fbo);
       parent.g.image(this, 0, 0);
       reflection.put_currentFramebuffer(ppg, currentFramebuffer);

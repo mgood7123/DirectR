@@ -17,7 +17,7 @@ void setup() {
   // create a new FBO and set up a texture
   g2.beginDraw_();
   
-  looping = false;
+  looping = true;
   
   originallyLooping = looping;
 }
@@ -51,6 +51,16 @@ void drawBox() {
 
 void draw() {
   if (!looping) looping = true;
+  if (originallyLooping) {
+    if (frameCount > 1) return;
+  } else {
+    //if (frameCount > 2) return;
+    //else if (frameCount == 2) try {
+    //  Thread.sleep(1000);
+    //} catch (Throwable e) {
+    //}
+  }
+  println(frameCount);
   
   background(0);
 
